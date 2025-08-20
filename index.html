@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Lands USA – Lotes à venda na Flórida</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS for interactive map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Leaflet CSS for interactive map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Orange Lands USA logo" class="logo-img">
+                <span>Orange Lands USA</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#properties">Propriedades</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Encontre seu lote perfeito na Flórida</h1>
+            <p>Find your perfect lot in Florida</p>
+            <a href="#properties" class="btn-primary">Ver propriedades</a>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section class="section" id="properties">
+        <div class="container">
+            <h2 class="section-title">Propriedades disponíveis</h2>
+            <p class="section-subtitle">Veja nossos lotes de terra disponíveis na Flórida</p>
+            <div class="properties-grid">
+                <!-- Mourning Dove Rd, Satsuma -->
+                <div class="property-card">
+                    <a href="property_mourningdove.html">
+                        <img src="assets/mourningdove.jpg" alt="Mourning Dove Rd – Satsuma" class="property-image">
+                        <div class="property-info">
+                            <h3>408 Mourning Dove Rd – Satsuma, FL</h3>
+                            <p class="property-details">Área: 0,23 acres</p>
+                            <p class="property-price">Preço: US$11.000</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Easy Ln, Crescent City -->
+                <div class="property-card">
+                    <a href="property_easylane.html">
+                        <img src="assets/easylane.jpg" alt="Easy Ln – Crescent City" class="property-image">
+                        <div class="property-info">
+                            <h3>Easy Ln – Crescent City, FL</h3>
+                            <p class="property-details">Área: 0,37 acres</p>
+                            <p class="property-price">Preço: US$5.500</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Adrian Ave, Interlachen/Florahome -->
+                <div class="property-card">
+                    <a href="property_adrianave.html">
+                        <img src="assets/adrianave.jpg" alt="Adrian Ave – Interlachen/Florahome" class="property-image">
+                        <div class="property-info">
+                            <h3>Adrian Ave – Interlachen/Florahome, FL</h3>
+                            <p class="property-details">Área: 0,24 acres</p>
+                            <p class="property-price">Preço: US$12.500</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Pueblo Ave, Sebring -->
+                <div class="property-card">
+                    <a href="property_puebloave.html">
+                        <img src="assets/puebloave.jpg" alt="Pueblo Ave – Sebring" class="property-image">
+                        <div class="property-info">
+                            <h3>5142 Pueblo Ave – Sebring, FL</h3>
+                            <p class="property-details">Área: 0,23 acres</p>
+                            <p class="property-price">Preço: US$17.500</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Lake Lucy Cir, Interlachen/Florahome -->
+                <div class="property-card">
+                    <a href="property_lakelucy.html">
+                        <img src="assets/lakelucy.jpg" alt="Lake Lucy Cir – Interlachen/Florahome" class="property-image">
+                        <div class="property-info">
+                            <h3>Lake Lucy Cir – Interlachen/Florahome, FL</h3>
+                            <p class="property-details">Área: 0,26 acres</p>
+                            <p class="property-price">Preço: US$10.900</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Delta Ct, Interlachen/Florahome -->
+                <div class="property-card">
+                    <a href="property_deltact.html">
+                        <img src="assets/deltact.jpg" alt="Delta Ct – Interlachen/Florahome" class="property-image">
+                        <div class="property-info">
+                            <h3>Delta Ct – Interlachen/Florahome, FL</h3>
+                            <p class="property-details">Área: 0,26 acres</p>
+                            <p class="property-price">Preço: US$10.900</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Roebuck St, Georgetown -->
+                <div class="property-card">
+                    <a href="property_roebuckst.html">
+                        <img src="assets/roebuckst.jpg" alt="Roebuck St – Georgetown" class="property-image">
+                        <div class="property-info">
+                            <h3>123 Roebuck St – Georgetown, FL</h3>
+                            <p class="property-details">Área: 0,23 acres</p>
+                            <p class="property-price">Preço: US$8.500</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section: displays interactive map with property locations -->
+    <section class="section bg-light" id="map-section">
+        <div class="container">
+            <h2 class="section-title">Mapa das propriedades</h2>
+            <p class="section-subtitle">Visualize a localização aproximada de cada lote</p>
+            <!-- Map container; height controlled in CSS -->
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <!-- Map Section: displays interactive map with property locations -->
+    <!-- (removed duplicate section) -->
+
+    <!-- About Section -->
+    <section class="section bg-light" id="about">
+        <div class="container">
+            <h2 class="section-title">Sobre nós</h2>
+            <p class="section-subtitle">Quem somos</p>
+            <div class="about-content">
+                <p>
+                    A Orange Lands USA é uma empresa especializada na venda de lotes de terra no estado da Flórida. Buscamos oferecer as melhores opções de terrenos para investidores, construtores e futuros proprietários.
+                </p>
+                <p>
+                    Desde pequenos lotes residenciais até grandes áreas rurais, trabalhamos com transparência, acompanhamento completo no processo de compra e suporte bilíngue em português e inglês. Nosso objetivo é ajudá‑lo a encontrar o lote ideal para construir o seu sonho.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <p class="section-subtitle">Fale conosco para mais informações</p>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p>Telefone / WhatsApp: <a href="https://wa.me/14074210074" target="_blank">+1 407 421 0074</a></p>
+                    <p>E‑mail: <a href="mailto:info@orangecorp.com">info@orangecorp.com</a></p>
+                    <p>Endereço comercial: Orlando, Flórida, EUA</p>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="mailto:info@orangecorp.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E‑mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar</button>
+                    </form>
+                    <p class="form-note">Ao clicar em enviar, seu cliente de e‑mail padrão será aberto com a mensagem preenchida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Orange Lands USA. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS and map initialization -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize the interactive map when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Only create the map if the container exists
+            var mapContainer = document.getElementById('map');
+            if (!mapContainer) return;
+            // Create map centered roughly over Florida
+            var map = L.map('map').setView([29.5, -81.5], 7);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            // Define each property with its coordinates and page link
+            var properties = [
+                { lat: 29.562, lon: -81.6304, name: '408 Mourning Dove Rd – Satsuma, FL', url: 'property_mourningdove.html' },
+                { lat: 29.5549701, lon: -81.6559137, name: 'Easy Ln – Crescent City, FL', url: 'property_easylane.html' },
+                { lat: 29.6455, lon: -81.90194, name: 'Adrian Ave – Interlachen/Florahome, FL', url: 'property_adrianave.html' },
+                { lat: 27.5451, lon: -81.529, name: '5142 Pueblo Ave – Sebring, FL', url: 'property_puebloave.html' },
+                { lat: 29.642020, lon: -81.936090, name: 'Lake Lucy Cir – Interlachen/Florahome, FL', url: 'property_lakelucy.html' },
+                { lat: 29.6203, lon: -81.8902, name: 'Delta Ct – Interlachen/Florahome, FL', url: 'property_deltact.html' },
+                { lat: 29.392778, lon: -81.614587, name: '123 Roebuck St – Georgetown, FL', url: 'property_roebuckst.html' }
+            ];
+            properties.forEach(function(prop) {
+                var marker = L.marker([prop.lat, prop.lon]).addTo(map);
+                marker.bindPopup('<a href="' + prop.url + '">' + prop.name + '</a>');
+            });
+        });
+    </script>
+</body>
+</html>
